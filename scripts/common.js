@@ -191,6 +191,24 @@ export function createList(items, type = "ul", style = null, liStyle = null) {
   return result;
 }
 
+export function createListH(items, type = "ul", style = null, liStyle = null) {
+  const result = parameters.document.createElement(type);
+
+  if (style) setStyle(result, style);
+
+  for (let i = 0; i < items.length; i++) {
+    let itemLI = createListItem(items[i], liStyle);
+    if (i + 1 !== items.length) itemLI.textContent += ",";
+    itemLI.style.padding = "0 2px";
+    itemLI.style.display = "inline-block";
+    result.appendChild(itemLI);
+  }
+
+  result.style.display = "inline-block";
+
+  return result;
+}
+
 export function createListItem(text, style = null) {
   const result = parameters.document.createElement("li");
 

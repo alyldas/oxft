@@ -2,6 +2,13 @@ var CACHE_NAME = "oxft-cache-v1";
 var urlsToCache = [
   "index.html",
   "main.js",
+  "style.js",
+  "json/boys.json",
+  "json/girls.json",
+  "json/instruction.json",
+  "json/men.json",
+  "json/questions.json",
+  "json/women.json",
   "scripts/chart.js",
   "scripts/common.js",
   "scripts/oxford-test.js"

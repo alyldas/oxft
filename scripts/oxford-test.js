@@ -396,11 +396,13 @@ function clickSaveChartButton() {
 function clickPrintChartButton() {
   document.getElementById("oxftSave").style.display = "none";
   document.getElementById("oxftPrint").style.display = "none";
+  document.getElementById("oxftReset").style.display = "none";
 
   window.print();
 
   document.getElementById("oxftSave").style.display = "inline";
   document.getElementById("oxftPrint").style.display = "inline";
+  document.getElementById("oxftReset").style.display = "inline";
 }
 
 function createUserInfoForm() {
@@ -659,7 +661,7 @@ function showResults(element) {
   percents.push("J: " + capacityResults["J"]);
 
   percentsDiv.appendChild(common.createHeader("Результаты", "h2"));
-  percentsDiv.appendChild(common.createList(percents));
+  percentsDiv.appendChild(common.createListH(percents));
 
   percentsDiv.lastElementChild.style.listStyleType = "none";
   percentsDiv.lastElementChild.style.paddingLeft = 0;
@@ -679,7 +681,7 @@ function showResults(element) {
   printButton.addEventListener("click", clickPrintChartButton);
   buttonsDiv.appendChild(printButton);
 
-  const resetButton = common.createButton("Пройти заново");
+  const resetButton = common.createButton("Пройти заново", "oxftReset");
   resetButton.addEventListener("click", () => {
     localStorage.clear();
     window.location.reload();
@@ -738,6 +740,9 @@ function keyDownSwitch(event) {
     case 51:
       submitNoQuestionForm();
       break;
+    case 52:
+      prevQuestionForm();
+      break;
     default:
       break;
   }
@@ -778,9 +783,6 @@ function submitQuestion(answer, value) {
 function prevQuestionForm() {
   const answerData = { num: 0, capacity: "", value: 0, answer: "" };
   const numInput = document.getElementById("oxftNum");
-
-  // commitAnswer(answerData);
-  // saveAnswerToLocalStorage(answerData);
 
   numInput.value = answerData.num - 1;
   let questionNum = 1;
