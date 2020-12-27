@@ -1,44 +1,44 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <script type="module" src="./scripts/common.js"></script>
     <script type="module" src="./scripts/oxford-test.js"></script>
     <title>Оксфордский тест способностей личности</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <main>
-      <h1>Оксфордский тест способностей личности</h1>
-      <section id="instruction" class="instruction"></section>
-      <section id="userInfo" class="inputForm"></section>
-      <section id="question" class="inputForm"></section>
-      <section id="results" class="results"></section>
+        <h1>Оксфордский тест способностей личности</h1>
+        <section id="instruction" class="instruction"></section>
+        <section id="userInfo" class="inputForm"></section>
+        <section id="question" class="inputForm"></section>
+        <section id="results" class="results"></section>
     </main>
-    <script type="module" src="main.js"></script>
+    <script type="module" src="index.js"></script>
     <script type="text/javascript">
-      if ("serviceWorker" in navigator) {
-        window.addEventListener("load", function () {
-          navigator.serviceWorker.register("sw.js").then(
-            function (registration) {
-              // Registration was successful
-              console.log(
-                "ServiceWorker registration successful: ",
-                registration
-              );
-            },
-            function (err) {
-              // registration failed :(
-              console.log("ServiceWorker registration failed: ", err);
-            }
-          );
-        });
-      }
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", function() {
+                navigator.serviceWorker.register("sw.js").then(
+                    function(registration) {
+                        // Registration was successful
+                        console.log(
+                            "ServiceWorker registration successful: ",
+                            registration
+                        );
+                    },
+                    function(err) {
+                        // registration failed :(
+                        console.log("ServiceWorker registration failed: ", err);
+                    }
+                );
+            });
+        }
     </script>
-  </body>
+</body>
+
 </html>
