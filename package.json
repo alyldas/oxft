@@ -1,0 +1,23 @@
+{
+    "name": "oxft",
+    "version": "1.0.0",
+    "description": "Оксфордский тест способностей личности",
+    "main": "main.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "electron ."
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/alyldas/oxft.git"
+    },
+    "author": "alyldas",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/alyldas/oxft/issues"
+    },
+    "homepage": "https://github.com/alyldas/oxft#readme",
+    "devDependencies": {
+        "electron": "^11.1.1"
+    }
+}
