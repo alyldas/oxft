@@ -9,6 +9,8 @@ function createWindow() {
         }
     })
 
+    win.setMenuBarVisibility(false)
+
     win.loadFile('index.html')
 }
 
