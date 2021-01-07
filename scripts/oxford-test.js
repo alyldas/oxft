@@ -862,6 +862,8 @@ function submitUserInfo(event) {
 }
 
 export function startTest() {
+    console.log("1.0.2");
+    
     loadUserInfoFromLocalStorage();
 
     userInfoForm.questions[0].value = userInfo.firstname;
