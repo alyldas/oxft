@@ -340,8 +340,8 @@ function calculateResults() {
     if (ranges) {
         document.removeEventListener("keydown", keyDownSwitch, false);
         
-        console.log(ranges);
-        console.log(capacityResults);
+        //console.log(ranges);
+        //console.log(capacityResults);
 
         capacityResults.A = ranges.A[capacityAnswers.A];
         capacityResults.B = ranges.B[capacityAnswers.B];
@@ -354,7 +354,7 @@ function calculateResults() {
         capacityResults.I = ranges.I[capacityAnswers.I];
         capacityResults.J = ranges.J[capacityAnswers.J];
         
-        console.log(capacityResults);
+        //console.log(capacityResults);
 
         if (capacityResults.A === undefined) capacityResults.A = 100;
         if (capacityResults.B === undefined) capacityResults.B = 100;
@@ -367,7 +367,7 @@ function calculateResults() {
         if (capacityResults.I === undefined) capacityResults.I = 100;
         if (capacityResults.J === undefined) capacityResults.J = 100;
         
-        console.log(capacityResults);
+        //console.log(capacityResults);
     } else {
         alert("Ranges еще не загружены"); // Диагностическое сообщение
     }
@@ -862,7 +862,7 @@ function submitUserInfo(event) {
 }
 
 export function startTest() {
-    console.log("1.0.2");
+    console.log("v1.0.3");
     
     loadUserInfoFromLocalStorage();
 
