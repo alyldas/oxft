@@ -1,4 +1,4 @@
-console.log("SW v1.0.4");
+console.info("SW v1.0.4");
 
 var CACHE_NAME = "oxft-cache-v1";
 var urlsToCache = [
